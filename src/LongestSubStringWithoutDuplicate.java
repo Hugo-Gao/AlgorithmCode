@@ -1,5 +1,9 @@
 import java.util.Arrays;
 
+
+/**
+ * 最长不含重复字符的子字符串
+ */
 public class LongestSubStringWithoutDuplicate
 {
     public static void main(String[] args)
@@ -32,7 +36,7 @@ public class LongestSubStringWithoutDuplicate
                     curLen = dis;
                 }
             }
-            alphabet[s.charAt(i) - 'a'] = i;
+            alphabet[s.charAt(i) - 'a'] = i;//更新为上一次出现的位置
         }
         return Math.max(curLen, maxLen);
     }
